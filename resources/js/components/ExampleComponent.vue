@@ -16,8 +16,22 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+        methods: {
+                getItems() {
+                    axios
+                        .get("api/taskman")
+                        .then(res => {
+                            this.items = res.data;
+                            console.log(this.items)
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
+                }
+            },
+            created() {
+                this.getItems();
+            }
+        
     }
 </script>
