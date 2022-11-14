@@ -8,7 +8,7 @@
                 <div class="card-header">Create Task</div>
                 <div class="card-body">
                 <task-form-component>
-                    </task-form-component>
+                </task-form-component>
                 </div>
             </div>
         </div>
@@ -17,13 +17,8 @@
             <div class="card">
                 <div class="card-header">My Task</div>
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }} alright
+                <list-view-component>
+                </list-view-component>
                 </div>
             </div>
         </div>

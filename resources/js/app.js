@@ -22,4 +22,7 @@ app.component('example-component', ExampleComponent);
 import TaskFormComponent from './components/Taskform.vue';
 app.component('task-form-component', TaskFormComponent);
 
+import ListViewComponent from './components/ListView.vue';
+app.component('list-view-component', ListViewComponent);
+
 app.mount('#app');
